@@ -1,0 +1,56 @@
+.TodoItem {
+  align-items: center;
+  background-color: #fafafa;
+  box-shadow: 0 5px 50px rgba(32, 35, 41, 0.15);
+  display: flex;
+  justify-content: center;
+  margin: 24px auto; /* Center horizontally and add margin above/below */
+  padding: 10px; /* Add some padding inside the item */
+  width: calc(100% - 62px);
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.TodoItem-p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 24px 0 24px 24px;
+  width: calc(100% - 120px);
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+
+.Icon {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  height: 48px;
+  justify-content: center;
+  width: 48px;
+}
+
+.Icon-check {
+  left: 12px;
+  position: absolute;
+}
+
+.Icon-delete {
+  position: absolute;
+  right: 0;
+  top: -24px;
+}
+
+/* Additional styles for Font Awesome icons */
+.Icon-check--active {
+  color: green; /* Adjust color as needed */
+}
+
+.Icon-delete:hover {
+  color: red; /* Adjust color as needed */
+}

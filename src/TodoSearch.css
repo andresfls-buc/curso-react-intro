@@ -1,0 +1,20 @@
+.todo-search {
+  background: #f9fbfc;
+  border: 2px solid #202329;
+  border-radius: 10px;
+  box-shadow: 0 5px 50px rgba(32, 35, 41, 0.25);
+  color: #1e1e1f;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 400;
+  height: 64px;
+  margin: 0 24px;
+  text-align: center;
+  width: calc(100% - 62px);
+}
+
+/* Change border color on focus */
+.todo-search:focus {
+  border-color: #f09027; /* New border color when focused */
+  outline: none; /* Remove default focus outline */
+}

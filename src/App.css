@@ -1,0 +1,25 @@
+/* App.css */
+body {
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmhnbmVtcTRqZm5yNjV1bGhsYTBzZGtzNDE0bmZzcGRpaWRsMWR5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ayBZf3xVtT74Q/giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f9fbfc;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1200px) {
+  body {
+    background-size: 100vh; /* Adjust for large screens */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-size: cover; /* Ensure proper fit on smaller screens */
+  }
+}

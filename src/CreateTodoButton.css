@@ -1,0 +1,37 @@
+/* CreateTodoButton.css */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The rest of your CSS */
+.CreateTodoButton {
+  align-items: center;
+  background-color: #346357;
+  border: none;
+  border-radius: 50%;
+  bottom: 24px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); /* Light black box shadow */
+  color: #fafafa;
+  cursor: pointer;
+  display: flex;
+  font-size: 50px;
+  font-weight: 700;
+  height: 64px;
+  justify-content: center;
+  position: fixed;
+  right: 24px;
+  transform: rotate(0);
+  transition: 0.3s ease;
+  width: 64px;
+  z-index: 1;
+}
+
+/* Class to apply the spinning animation */
+.CreateTodoButton:hover {
+  transform: rotate(224deg);
+}
