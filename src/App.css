@@ -1,6 +1,6 @@
 /* App.css */
 body {
-  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmhnbmVtcTRqZm5yNjV1bGhsYTBzZGtzNDE0bmZzcGRpaWRsMWR5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ayBZf3xVtT74Q/giphy.gif");
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWRodjVhMnF0cWd3OWp4bnlxenl1cGIwN3EyeGVjeDQ1cGl5Y3RpdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ayBZf3xVtT74Q/giphy.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,7 +13,7 @@ body {
 /* Adjustments for larger screens */
 @media (min-width: 1200px) {
   body {
-    background-size: 100vh; /* Adjust for large screens */
+    background-size: 100vh;
   }
 }
 

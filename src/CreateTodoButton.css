@@ -11,11 +11,11 @@
 /* The rest of your CSS */
 .CreateTodoButton {
   align-items: center;
-  background-color: #346357;
+  background-color: #ffdd00;
   border: none;
   border-radius: 50%;
   bottom: 24px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); /* Light black box shadow */
+  box-shadow: 0 5px 25px rgba(255, 221, 0, 0.5);
   color: #fafafa;
   cursor: pointer;
   display: flex;
