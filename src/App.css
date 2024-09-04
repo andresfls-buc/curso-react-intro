@@ -1,6 +1,6 @@
 /* App.css */
 body {
-  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWRodjVhMnF0cWd3OWp4bnlxenl1cGIwN3EyeGVjeDQ1cGl5Y3RpdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ayBZf3xVtT74Q/giphy.gif");
+  background-image: url("https://i.pinimg.com/1200x/58/6d/64/586d64223e08e32c917cb3b2cfd5bcef.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -8,18 +8,113 @@ body {
   min-height: 100vh;
   width: 100%;
   background-color: #f9fbfc;
+  box-sizing: border-box; /* Ensure padding/border doesn't increase size */
+}
+
+/* Apply box-sizing to all elements by default */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Use border-box for consistent sizing */
+}
+
+.congratulations-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow: hidden; /* Prevents scrolling issues */
+}
+
+.congratulations-content {
+  border: 2px solid #87ceeb;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px; /* Adjust max-width for smaller screens */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.congratulations-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.congratulations-content p {
+  margin-bottom: 20px;
+}
+
+.congratulations-content button {
+  background-color: #ff00ff;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.congratulations-content button:hover {
+  background-color: #87ceeb;
 }
 
 /* Adjustments for larger screens */
 @media (min-width: 1200px) {
   body {
-    background-size: 100vh;
+    background-size: cover;
   }
 }
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
-  body {
-    background-size: cover; /* Ensure proper fit on smaller screens */
+  .congratulations-content {
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 90%; /* Further reduce max-width for smaller screens */
+  }
+
+  .congratulations-content h2 {
+    font-size: 20px;
+  }
+
+  .congratulations-content p {
+    font-size: 16px;
+  }
+
+  .congratulations-content button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .congratulations-content {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 100%; /* Ensure full width within margins */
+  }
+
+  .congratulations-content h2 {
+    font-size: 18px;
+  }
+
+  .congratulations-content p {
+    font-size: 14px;
+  }
+
+  .congratulations-content button {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }

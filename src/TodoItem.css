@@ -28,29 +28,58 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 24px;
   font-weight: bold;
   height: 48px;
   justify-content: center;
   width: 48px;
+  z-index: 10; /* Ensure icons are clickable */
 }
 
 .Icon-check {
-  left: 12px;
   position: absolute;
+  left: 12px;
 }
 
 .Icon-delete {
   position: absolute;
-  right: 0;
-  top: -24px;
+  right: 12px; /* Adjusted to ensure it's within bounds */
+  top: 12px; /* Adjusted for vertical centering */
 }
 
-/* Additional styles for Font Awesome icons */
+/* Additional styles for active state */
 .Icon-check--active {
-  color: green; /* Adjust color as needed */
+  color: #4bb543; /* Adjust color as needed */
 }
 
 .Icon-delete:hover {
   color: red; /* Adjust color as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Icon {
+    font-size: 32px; /* Reduce icon size for tablets and smaller screens */
+    height: 32px;
+    width: 32px;
+  }
+
+  .TodoItem-p {
+    font-size: 16px; /* Adjust text size for smaller screens */
+    margin: 16px 0 16px 16px;
+    width: calc(100% - 80px); /* Adjust width to fit content */
+  }
+}
+
+@media (max-width: 480px) {
+  .Icon {
+    font-size: 24px; /* Further reduce icon size for mobile devices */
+    height: 24px;
+    width: 24px;
+  }
+
+  .TodoItem-p {
+    font-size: 14px; /* Adjust text size for very small screens */
+    margin: 12px 0 12px 12px;
+    width: calc(100% - 60px); /* Adjust width to fit content */
+  }
 }

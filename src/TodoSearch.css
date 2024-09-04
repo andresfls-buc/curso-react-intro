@@ -15,6 +15,6 @@
 
 /* Change border color on focus */
 .todo-search:focus {
-  border-color: #ffdd00; /* New border color when focused */
+  border-color: #ff00ff; /* New border color when focused */
   outline: none; /* Remove default focus outline */
 }

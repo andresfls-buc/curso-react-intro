@@ -1,21 +1,12 @@
 /* CreateTodoButton.css */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
-/* The rest of your CSS */
 .CreateTodoButton {
   align-items: center;
-  background-color: #ffdd00;
+  background-color: #ff00ff;
   border: none;
   border-radius: 50%;
   bottom: 24px;
-  box-shadow: 0 5px 25px rgba(255, 221, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(255, 0, 255, 0.5);
   color: #fafafa;
   cursor: pointer;
   display: flex;
