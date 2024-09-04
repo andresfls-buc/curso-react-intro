@@ -8,7 +8,7 @@ import { CreateTodoButton } from "./CreateTodoButton";
 import "./App.css";
 
 const defaultTodos = [
-  { text: "Hacer ejercicio", completed: true },
+  { text: "Defeat all enemies", completed: true },
   { text: "Tomar el curso de Intro a React.js", completed: false },
 ];
 

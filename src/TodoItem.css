@@ -48,11 +48,15 @@
 
 /* Additional styles for active state */
 .Icon-check--active {
-  color: #4bb543; /* Adjust color as needed */
+  color: #00bfff; /* Adjust color as needed */
 }
 
 .Icon-delete:hover {
   color: red; /* Adjust color as needed */
+}
+
+.Icon-check:hover {
+  color: #4682b4; /* Adjust color as needed */
 }
 
 /* Responsive adjustments */
