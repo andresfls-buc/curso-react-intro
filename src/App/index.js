@@ -1,19 +1,25 @@
 import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
+import { TodoCounter } from "../TodoCounter";
+import { TodoSearch } from "../TodoSearch";
+import { TodoList } from "../TodoList";
+import { TodoItem } from "../TodoItem";
+import { CreateTodoButton } from "../CreateTodoButton";
+import { useLocalStorage } from "./useLocalStorage";
 import "./App.css";
 
-const defaultTodos = [
-  { text: "Defeat all enemies", completed: true },
-  { text: "Tomar el curso de Intro a React.js", completed: false },
-];
+// const defaultTodos = [
+//   { text: "Defeat all enemies", completed: true },
+//   { text: "Tomar el curso de Intro a React.js", completed: false },
+// ];
+
+// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
+// localStorage.removeItem('TODOS_V1');
+
+// Esto es un custom hooks
 
 function App() {
-  const [todos, setTodos] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
   const [showCongrats, setShowCongrats] = React.useState(false);
 
@@ -27,22 +33,22 @@ function App() {
   });
 
   const completeTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
-    newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    const newItem = [...todos];
+    const todoIndex = newItem.findIndex((todo) => todo.text === text);
+    newItem[todoIndex].completed = true;
+    saveTodos(newItem);
 
     // Check if all todos are completed and show the message
-    if (newTodos.filter((todo) => !!todo.completed).length === totalTodos) {
+    if (newItem.filter((todo) => !!todo.completed).length === totalTodos) {
       setShowCongrats(true);
     }
   };
 
   const deleteTodo = (text) => {
-    const newTodos = [...todos];
-    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
-    newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    const newItem = [...todos];
+    const todoIndex = newItem.findIndex((todo) => todo.text === text);
+    newItem.splice(todoIndex, 1);
+    saveTodos(newItem);
   };
 
   const closeCongratsMessage = () => {
