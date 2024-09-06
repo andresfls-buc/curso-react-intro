@@ -5,21 +5,20 @@ import { AppUI } from "./AppUI";
 import { LoadingSpinner } from "../LoadingSpinner";
 import { Footer } from "../Footer";
 import "./App.css";
+import { TodosError } from "../TodosError";
 
-// localStorage.removeItem('TODOS_V1');
+// localStorage.removeItem("TODOS_V1");
 // const defaultTodos = [
 //   { text: "Defeat all enemies", completed: true },
 //   { text: "Tomar el curso de Intro a React.js", completed: false },
-// { text: "Defeat Griffith", completed: false },
+//   { text: "Defeat Griffith", completed: false },
 // ];
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 
-// Esto es un custom hooks
-
 function App() {
   const {
-    item: todos,
+    item: todos = [], // Default to empty array if not provided
     saveItem: saveTodos,
     loading,
     error,
@@ -27,11 +26,12 @@ function App() {
   const [searchValue, setSearchValue] = React.useState("");
   const [showCongrats, setShowCongrats] = React.useState(false);
 
-  const completedTodos = todos.filter((todos) => !!todos.completed).length;
+  const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
 
+  // Defensive check to ensure `todo.text` is defined
   const searchedTodos = todos.filter((todo) => {
-    const todoText = todo.text.toLowerCase();
+    const todoText = todo.text ? todo.text.toLowerCase() : ""; // Ensure todo.text is defined
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
@@ -39,20 +39,26 @@ function App() {
   const completeTodo = (text) => {
     const newItem = [...todos];
     const todoIndex = newItem.findIndex((todo) => todo.text === text);
-    newItem[todoIndex].completed = true;
-    saveTodos(newItem);
+    if (todoIndex >= 0) {
+      // Ensure the todo exists before modifying
+      newItem[todoIndex].completed = true;
+      saveTodos(newItem);
 
-    // Check if all todos are completed and show the message
-    if (newItem.filter((todo) => !!todo.completed).length === totalTodos) {
-      setShowCongrats(true);
+      // Check if all todos are completed and show the message
+      if (newItem.filter((todo) => !!todo.completed).length === totalTodos) {
+        setShowCongrats(true);
+      }
     }
   };
 
   const deleteTodo = (text) => {
     const newItem = [...todos];
     const todoIndex = newItem.findIndex((todo) => todo.text === text);
-    newItem.splice(todoIndex, 1);
-    saveTodos(newItem);
+    if (todoIndex >= 0) {
+      // Ensure the todo exists before deleting
+      newItem.splice(todoIndex, 1);
+      saveTodos(newItem);
+    }
   };
 
   const closeCongratsMessage = () => {
@@ -74,7 +80,7 @@ function App() {
   }
 
   if (error) {
-    return <p>Error loading todos...</p>; // Handle error case
+    return <TodosError />; // Handle error case
   }
 
   return (

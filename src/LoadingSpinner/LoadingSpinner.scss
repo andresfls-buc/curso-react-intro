@@ -1,15 +1,14 @@
 @use "sass:math";
 
-$particles: 100; // Number of particles
-$particleSize: 6px; // Size of particles
-$radius: 100px; // Radius of the ring
-$lapDuration: 3s; // Duration of the animation
+$particles: 100;
+$particleSize: 6px;
+$radius: 100px;
+$lapDuration: 3s;
 
 html,
 body {
   overflow: hidden;
-  background: #111;
-  margin: 0; // Ensure no default margin
+  margin: 0;
   height: 100%;
 }
 
@@ -17,18 +16,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; // Full viewport height
-  width: 100vw; // Full viewport width
-  position: relative; // Ensure spinner can be positioned relative to this container
+  height: 100vh;
+  width: 100vw;
+  position: fixed; // Use fixed to cover the entire viewport
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); // Dark opaque background
+  z-index: 9999; // Ensure it appears on top of other content
 }
 
 .spinner {
-  position: absolute; // Use absolute positioning for precise centering
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); // Center the spinner
-  width: 120px; // Adjust the size as needed
-  height: 120px; // Adjust the size as needed
+  position: relative;
+  width: 120px;
+  height: 120px;
   perspective: 200px;
 }
 
@@ -53,12 +53,11 @@ i {
 
 @for $i from 1 through $particles {
   i:nth-child(#{$i}) {
-    $angle: math.div($i, $particles) * 360; // Use math.div for division
+    $angle: math.div($i, $particles) * 360;
     transform: rotate(#{$angle}deg) translate3d($radius, 0, 0);
 
     b {
-      animation-delay: $i *
-        math.div($lapDuration, $particles - 2); // Use math.div for division
+      animation-delay: $i * math.div($lapDuration, $particles - 2);
     }
   }
 }
@@ -72,7 +71,7 @@ i {
         math.div(-$particleSize, 2),
         math.div(-$particleSize, 2)
       )
-      scale(3); // Use math.div for division
+      scale(3);
   }
   50% {
     transform: scale(1);

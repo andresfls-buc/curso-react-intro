@@ -1,8 +1,12 @@
+import React from "react";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
 import { CreateTodoButton } from "../CreateTodoButton";
+import { EmptyTodos } from "../EmptyTodos";
+import { TodosError } from "../TodosError";
+import { LoadingSpinner } from "../LoadingSpinner";
 
 function AppUI({
   loading,
@@ -17,25 +21,32 @@ function AppUI({
   showCongrats,
   closeCongratsMessage,
 }) {
+  // Determine if the empty todos message should be shown
+  const showEmptyTodos =
+    !loading &&
+    !error &&
+    searchedTodos.length === 0 &&
+    searchValue.trim() === "";
+
   return (
     <>
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
-        {loading && <p>Estamos cargando..</p>}
-        {error && <p>Error.</p>}
-        {!loading && searchedTodos.length === 0 && <p>Crea tu primer TODO</p>}
-
-        {searchedTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
+        {loading && <LoadingSpinner />}
+        {error && <TodosError />}
+        {showEmptyTodos && <EmptyTodos />}
+        {searchedTodos.length > 0 &&
+          searchedTodos.map((todo, index) => (
+            <TodoItem
+              key={todo.id ? todo.id : index} // Ensure 'id' is unique or use index if no unique id
+              text={todo.text}
+              completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
+            />
+          ))}
       </TodoList>
 
       <CreateTodoButton />

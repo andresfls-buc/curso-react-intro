@@ -1,5 +1,5 @@
 import React from "react";
-import "./LoadingSpinner.scss"; // Use .scss extension
+import "./LoadingSpinner.scss"; // Ensure you're importing the correct SCSS file
 
 function LoadingSpinner() {
   // Create the particles dynamically
@@ -8,7 +8,7 @@ function LoadingSpinner() {
       <i key={index}>
         <b
           style={{
-            animationDelay: `${index * (3 / 100)}s`,
+            animationDelay: `${index * (3 / 100)}s`, // Adjust delay based on index
           }}
         ></b>
       </i>

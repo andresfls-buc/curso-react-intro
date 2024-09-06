@@ -1,0 +1,56 @@
+/* Full-screen overlay with transparent background */
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centering error message */
+.error-message {
+  text-align: center;
+  color: #ffffff; /* White text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Circle animation */
+.error-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1); /* White color */
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1); /* White box shadow */
+}
+
+/* Error text styling */
+.error-text {
+  font-size: 24px;
+  color: #ffffff; /* White text color */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
