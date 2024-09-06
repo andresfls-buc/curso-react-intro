@@ -30,6 +30,7 @@ body {
   width: 120px;
   height: 120px;
   perspective: 200px;
+  margin: 0 auto; // Ensures spinner is centered horizontally
 }
 
 i {
@@ -54,7 +55,8 @@ i {
 @for $i from 1 through $particles {
   i:nth-child(#{$i}) {
     $angle: math.div($i, $particles) * 360;
-    transform: rotate(#{$angle}deg) translate3d($radius, 0, 0);
+    transform: rotate(#{$angle}deg)
+      translate3d($radius, 0, 0); // ensure radius is balanced correctly
 
     b {
       animation-delay: $i * math.div($lapDuration, $particles - 2);
@@ -76,4 +78,26 @@ i {
   50% {
     transform: scale(1);
   }
+}
+
+/* Media queries for mobile responsiveness */
+
+@media (max-width: 768px) {
+  .spinner {
+    width: 90px;
+    height: 90px;
+  }
+
+  $particleSize: 4px;
+  $radius: 80px;
+}
+
+@media (max-width: 480px) {
+  .spinner {
+    width: 70px;
+    height: 70px;
+  }
+
+  $particleSize: 3px;
+  $radius: 60px;
 }

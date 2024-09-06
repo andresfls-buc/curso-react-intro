@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
@@ -7,21 +7,23 @@ import { CreateTodoButton } from "../CreateTodoButton";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodosError } from "../TodosError";
 import { LoadingSpinner } from "../LoadingSpinner";
+import { TodoContext } from "../TodoContext";
 
-function AppUI({
-  loading,
-  error,
-  completedTodos,
-  totalTodos,
-  searchValue,
-  searchedTodos,
-  setSearchValue,
-  deleteTodo,
-  completeTodo,
-  showCongrats,
-  closeCongratsMessage,
-}) {
-  // Determine if the empty todos message should be shown
+function AppUI() {
+  // Use the useContext hook to get context values
+  const {
+    loading,
+    error,
+    searchedTodos,
+    searchValue,
+    completeTodo,
+    deleteTodo,
+    showCongrats,
+    totalTodos,
+    closeCongratsMessage,
+  } = useContext(TodoContext);
+
+  // Define the conditions that depend on context values
   const showEmptyTodos =
     !loading &&
     !error &&
@@ -30,8 +32,8 @@ function AppUI({
 
   return (
     <>
-      <TodoCounter completed={completedTodos} total={totalTodos} />
-      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+      <TodoCounter />
+      <TodoSearch />
 
       <TodoList>
         {loading && <LoadingSpinner />}
@@ -49,8 +51,6 @@ function AppUI({
           ))}
       </TodoList>
 
-      <CreateTodoButton />
-
       {showCongrats && (
         <div className="congratulations-modal">
           <div className="congratulations-content">
@@ -60,6 +60,8 @@ function AppUI({
           </div>
         </div>
       )}
+
+      <CreateTodoButton />
     </>
   );
 }
