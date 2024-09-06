@@ -2,20 +2,28 @@ import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
 import { useLocalStorage } from "./useLocalStorage";
 import { AppUI } from "./AppUI";
+import { LoadingSpinner } from "../LoadingSpinner";
+import { Footer } from "../Footer";
 import "./App.css";
 
+// localStorage.removeItem('TODOS_V1');
 // const defaultTodos = [
 //   { text: "Defeat all enemies", completed: true },
 //   { text: "Tomar el curso de Intro a React.js", completed: false },
+// { text: "Defeat Griffith", completed: false },
 // ];
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
-// localStorage.removeItem('TODOS_V1');
 
 // Esto es un custom hooks
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = React.useState("");
   const [showCongrats, setShowCongrats] = React.useState(false);
 
@@ -61,16 +69,31 @@ function App() {
     }
   }, [showCongrats]);
 
+  if (loading) {
+    return <LoadingSpinner />; // Show spinner while loading is true
+  }
+
+  if (error) {
+    return <p>Error loading todos...</p>; // Handle error case
+  }
+
   return (
-    <AppUI
-      completedTodos={completedTodos}
-      totalTodos={totalTodos}
-      searchValue={searchValue}
-      searchedTodos={searchedTodos}
-      setSearchValue={setSearchValue}
-      deleteTodo={deleteTodo}
-      completeTodo={completeTodo}
-    />
+    <div className="app">
+      <AppUI
+        loading={loading}
+        error={error}
+        completedTodos={completedTodos}
+        totalTodos={totalTodos}
+        searchValue={searchValue}
+        searchedTodos={searchedTodos}
+        setSearchValue={setSearchValue}
+        deleteTodo={deleteTodo}
+        completeTodo={completeTodo}
+        showCongrats={showCongrats}
+        closeCongratsMessage={closeCongratsMessage}
+      />
+      <Footer />
+    </div>
   );
 }
 
