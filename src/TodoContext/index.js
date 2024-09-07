@@ -15,6 +15,7 @@ function TodoProvider({ children }) {
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
   const [showCongrats, setShowCongrats] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(""); // State for error message
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -24,6 +25,29 @@ function TodoProvider({ children }) {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
+
+  const addTodo = (text) => {
+    if (!text.trim()) {
+      setErrorMessage("Todo cannot be empty.");
+      return;
+    }
+
+    const isDuplicate = todos.some(
+      (todo) => todo.text.trim().toLowerCase() === text.trim().toLowerCase()
+    );
+    if (isDuplicate) {
+      setErrorMessage("This todo already exists.");
+      return;
+    }
+
+    const newItem = [...todos];
+    newItem.push({
+      text,
+      completed: false,
+    });
+    saveTodos(newItem);
+    setErrorMessage(""); // Clear the error message on successful addition
+  };
 
   const completeTodo = (text) => {
     const newItem = [...todos];
@@ -70,12 +94,16 @@ function TodoProvider({ children }) {
         searchValue,
         searchedTodos,
         setSearchValue,
+        addTodo,
         deleteTodo,
         completeTodo,
         showCongrats,
         closeCongratsMessage,
         setOpenModal,
         openModal,
+        errorMessage, // Pass errorMessage to the context
+        setErrorMessage,
+        todos, // Provide todos here
       }}
     >
       {children}

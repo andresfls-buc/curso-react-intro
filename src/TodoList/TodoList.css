@@ -2,5 +2,13 @@
   text-align: center;
   list-style: none;
   margin: 0;
-  padding: 0 0 56px;
+  padding: 0;
+  max-height: calc(100vh - 56px); /* Allow space for footer if needed */
+}
+
+/* Adjust padding if needed */
+.TodoList::after {
+  content: "";
+  display: block;
+  height: 56px; /* Space for footer if applicable */
 }

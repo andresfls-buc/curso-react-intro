@@ -9,6 +9,8 @@ body {
   width: 100%;
   background-color: #f9fbfc;
   box-sizing: border-box; /* Ensure padding/border doesn't increase size */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;
 }
 
 /* Apply box-sizing to all elements by default */
@@ -30,7 +32,7 @@ body {
   align-items: center;
   z-index: 1000;
   padding: 20px;
-  overflow: hidden; /* Prevents scrolling issues */
+  overflow: auto; /* Allow scrolling within the modal if needed */
 }
 
 .congratulations-content {

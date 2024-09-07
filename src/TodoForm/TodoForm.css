@@ -72,3 +72,11 @@ textarea:focus {
   width: 100%;
   text-align: center;
 }
+
+.error-message {
+  color: red; /* Error color */
+  font-size: 0.875rem; /* Font size */
+  margin-top: 0.5rem; /* Space above the error message */
+  /* Ensure the error message does not cause layout issues */
+  word-wrap: break-word; /* Handle long words */
+}
