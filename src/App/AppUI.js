@@ -7,6 +7,7 @@ import { CreateTodoButton } from "../CreateTodoButton";
 import { EmptyTodos } from "../EmptyTodos";
 import { TodosError } from "../TodosError";
 import { LoadingSpinner } from "../LoadingSpinner";
+import { Modal } from "../Modal";
 import { TodoContext } from "../TodoContext";
 
 function AppUI() {
@@ -21,6 +22,8 @@ function AppUI() {
     showCongrats,
     totalTodos,
     closeCongratsMessage,
+    openModal,
+    setOpenModal,
   } = useContext(TodoContext);
 
   // Define the conditions that depend on context values
@@ -62,6 +65,7 @@ function AppUI() {
       )}
 
       <CreateTodoButton />
+      {openModal && <Modal>La funcionalidad de agregar TODO</Modal>}
     </>
   );
 }
