@@ -1,15 +1,17 @@
+import React, { useContext } from "react";
+import { TodoContext } from "../TodoContext"; // Correct import path
 import "./CreateTodoButton.css";
 
 function CreateTodoButton() {
+  const { setOpenModal } = useContext(TodoContext); // Access setOpenModal from context
+
   return (
     <button
       className="CreateTodoButton"
-      onClick={(event) => {
-        console.log("le diste click");
-        console.log(event);
+      onClick={() => {
+        setOpenModal((prevState) => !prevState); // Toggle modal state
       }}
     >
-      {" "}
       +
     </button>
   );

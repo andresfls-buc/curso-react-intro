@@ -13,7 +13,7 @@ function TodoProvider({ children }) {
   } = useLocalStorage("TODOS_V1", []);
 
   const [searchValue, setSearchValue] = React.useState("");
-  const [openModal, setOpenModal] = React.useState(true);
+  const [openModal, setOpenModal] = React.useState(false);
   const [showCongrats, setShowCongrats] = React.useState(false);
 
   const completedTodos = todos.filter((todo) => !!todo.completed).length;
