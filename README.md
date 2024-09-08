@@ -1,6 +1,6 @@
 # Todo Machine
 
-[Live Demo](https://andresfls-buc.github.io/curso-react-intro/)
+[Click to go to the website](https://andresfls-buc.github.io/curso-react-intro/)
 
 ## Table of Contents
 - [Overview](#overview)
