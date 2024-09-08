@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/andresfls-buc/curso-react-intro.git/static/css/main.90ff2674.css",
-    "main.js": "/andresfls-buc/curso-react-intro.git/static/js/main.b5d682b4.js",
-    "static/media/fa-solid-900.ttf": "/andresfls-buc/curso-react-intro.git/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
-    "static/media/jpg": "/andresfls-buc/curso-react-intro.git/static/media/586d64223e08e32c917cb3b2cfd5bcef.cb517f3cad29bc748861.jpg",
-    "static/media/fa-brands-400.ttf": "/andresfls-buc/curso-react-intro.git/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
-    "static/media/fa-solid-900.woff2": "/andresfls-buc/curso-react-intro.git/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
-    "static/media/fa-brands-400.woff2": "/andresfls-buc/curso-react-intro.git/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
-    "static/media/fa-regular-400.ttf": "/andresfls-buc/curso-react-intro.git/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
-    "static/media/fa-regular-400.woff2": "/andresfls-buc/curso-react-intro.git/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
-    "static/media/fa-v4compatibility.ttf": "/andresfls-buc/curso-react-intro.git/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
-    "static/media/fa-v4compatibility.woff2": "/andresfls-buc/curso-react-intro.git/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
-    "index.html": "/andresfls-buc/curso-react-intro.git/index.html",
-    "main.90ff2674.css.map": "/andresfls-buc/curso-react-intro.git/static/css/main.90ff2674.css.map",
-    "main.b5d682b4.js.map": "/andresfls-buc/curso-react-intro.git/static/js/main.b5d682b4.js.map"
+    "main.css": "/curso-react-intro/static/css/main.525ee45f.css",
+    "main.js": "/curso-react-intro/static/js/main.b5d682b4.js",
+    "static/media/fa-solid-900.ttf": "/curso-react-intro/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/jpg": "/curso-react-intro/static/media/586d64223e08e32c917cb3b2cfd5bcef.cb517f3cad29bc748861.jpg",
+    "static/media/fa-brands-400.ttf": "/curso-react-intro/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/curso-react-intro/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/curso-react-intro/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/fa-regular-400.ttf": "/curso-react-intro/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/curso-react-intro/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/curso-react-intro/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/curso-react-intro/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/curso-react-intro/index.html",
+    "main.525ee45f.css.map": "/curso-react-intro/static/css/main.525ee45f.css.map",
+    "main.b5d682b4.js.map": "/curso-react-intro/static/js/main.b5d682b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.90ff2674.css",
+    "static/css/main.525ee45f.css",
     "static/js/main.b5d682b4.js"
   ]
 }
