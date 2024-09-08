@@ -1,75 +1,38 @@
-# Repositorio base del Curso de Introducción a React.js en Platzi
+# Todo Machine
 
-¡Hola, Platzinauta!
+[Live Demo](https://andresfls-buc.github.io/curso-react-intro/)
 
-En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Design](#design)
 
-La rama principal contiene el código con el que eempezamos el curso. En las demás ramas encontrarás el código de las siguientes clases y finalmente el deploy de la aplicación.
 
-¡Mucha suerte aprendiendo React! #NuncaParesDeAprender
+## Overview
+**Todo Machine** is a task management web app that allows users to add, search, complete, and delete todos. The app is simple, efficient, and user-friendly, making it easy to manage personal or project tasks. All todos are saved locally, so users can resume their work without losing their tasks when refreshing the page.
 
-## Getting Started with Create React App
+## Features
+- **Add Todos**: Quickly add new tasks to your todo list.
+- **Search Functionality**: Filter through your todos using a search bar.
+- **Complete Todos**: Mark tasks as completed.
+- **Delete Todos**: Remove unwanted or completed tasks.
+- **Confetti Animation**: Celebrate when all tasks are completed with a confetti effect.
+- **Modal Window**: Add todos through a user-friendly modal.
+- **Local Storage Persistence**: The app automatically saves todos locally in the browser so tasks persist across sessions.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used
+- **React.js**: The app is built using React for efficient and modular UI development.
+- **React Context API**: Used for global state management to handle todos, search values, and modal visibility without prop drilling.
+- **Canvas Confetti**: Adds a fun confetti effect when all todos are completed.
+- **Local Storage**: Utilizes browser localStorage to persist todo data between sessions.
+- **React Icons**: Includes various icons for a more visual and user-friendly UI.
+- **Font Awesome**: Adds rich icons to enhance the design and usability.
+- **SASS**: Used for writing maintainable and modular CSS, ensuring a well-organized styling structure.
 
-## Available Scripts
+## Design 
+![Screenshot 2024-09-05 120446](https://github.com/user-attachments/assets/76f5bff9-68c9-4c19-bf05-70f6d75902b2)
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot 2024-09-08 114837](https://github.com/user-attachments/assets/74f9b829-6481-4f7e-bf66-82506db1fb7b)
+![Screenshot 2024-09-08 120226](https://github.com/user-attachments/assets/0f82ee70-e280-4c10-94e7-f00b1226b692)
+![Screenshot 2024-09-08 120138](https://github.com/user-attachments/assets/4327b66c-c99f-485e-a656-ca0239b98e55)
