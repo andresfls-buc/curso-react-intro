@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/curso-react-intro/static/css/main.86c1a1d7.css",
+    "main.css": "/curso-react-intro/static/css/main.7a32c853.css",
     "main.js": "/curso-react-intro/static/js/main.d3d03920.js",
     "static/media/fa-solid-900.ttf": "/curso-react-intro/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/curso-react-intro/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
@@ -11,11 +11,11 @@
     "static/media/fa-v4compatibility.ttf": "/curso-react-intro/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/curso-react-intro/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/curso-react-intro/index.html",
-    "main.86c1a1d7.css.map": "/curso-react-intro/static/css/main.86c1a1d7.css.map",
+    "main.7a32c853.css.map": "/curso-react-intro/static/css/main.7a32c853.css.map",
     "main.d3d03920.js.map": "/curso-react-intro/static/js/main.d3d03920.js.map"
   },
   "entrypoints": [
-    "static/css/main.86c1a1d7.css",
+    "static/css/main.7a32c853.css",
     "static/js/main.d3d03920.js"
   ]
 }
