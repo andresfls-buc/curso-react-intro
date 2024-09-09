@@ -31,8 +31,10 @@
 - **SASS**: Used for writing maintainable and modular CSS, ensuring a well-organized styling structure.
 
 ## Design 
-![Screenshot 2024-09-05 120446](https://github.com/user-attachments/assets/76f5bff9-68c9-4c19-bf05-70f6d75902b2)
 
-![Screenshot 2024-09-08 114837](https://github.com/user-attachments/assets/74f9b829-6481-4f7e-bf66-82506db1fb7b)
-![Screenshot 2024-09-08 120226](https://github.com/user-attachments/assets/0f82ee70-e280-4c10-94e7-f00b1226b692)
-![Screenshot 2024-09-08 120138](https://github.com/user-attachments/assets/4327b66c-c99f-485e-a656-ca0239b98e55)
+![Screenshot 2024-09-09 144410](https://github.com/user-attachments/assets/847a9e81-a2f5-49e2-a238-4e01e8a4dee5)
+![Screenshot 2024-09-09 144335](https://github.com/user-attachments/assets/e3a475d5-22a6-431a-9a1b-814775f8cc1c)
+![Screenshot 2024-09-09 144322](https://github.com/user-attachments/assets/7c931e75-eac4-449c-9139-2b4b1d45343e)
+
+![Screenshot 2024-09-09 144310](https://github.com/user-attachments/assets/59416f0e-7a15-4bff-af82-d50fe1f5fb39)
+
